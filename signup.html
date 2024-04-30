@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ccms.css">
+    <title>Sign Up - College Club Management System</title>
+    <style>
+        body {
+            /* Set background image CSS */
+            background-image: url('campus background.png');
+            /* Prevent background image from repeating */
+            background-repeat: no-repeat;
+            /* Center the background image both horizontally and vertically */
+            background-position: center;
+            /* Scale the background image to fit the entire webpage without cropping */
+            background-size: cover;
+            background-attachment: fixed;
+            /* Optional: Set background color as fallback */
+            background-color: #f0f0f0; /* Fallback color if the image is not available or supported */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="signup_box">
+            <div class="signup_header">
+                <span>Sign Up</span>
+            </div>
+            <div class="input_box">
+                <input type="text" id="name" class="input-field" required>
+                <label for="name" class="label">Name</label>
+                <i class="bx bx-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="email" id="email" class="input-field" required>
+                <label for="email" class="label">College Email ID</label>
+                <i class="bx bx-envelope icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="text" id="prn" class="input-field" required>
+                <label for="prn" class="label">PRN No.</label>
+                <i class="bx bx-id-card icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="pass" class="input-field" required>
+                <label for="password" class="label">Password</label>
+                <i class="bx bx-lock-alt icon"></i>
+            </div>
+            <div class="input_box">
+                <!-- Convert input submit to button -->
+                <button id="SignUpButton" class="input-submit">Sign Up!</button>
+            </div>
+            <script>
+                // Add event listener to the login button
+                document.getElementById("SignUpButton").addEventListener("click", function() {
+                    // Simulating successful login
+                    // Here you would perform actual login logic (e.g., validate credentials)
+                    // If login is successful, redirect to the homepage
+                    window.location.href = "index.html"; // Replace "index.html" with the actual URL of your homepage
+                });
+            </script>
+            <div class="login-link">
+                <span>Already have an account? <a href="login.html" target="_self" title="Click to login">Login</a></span>
+            </div>
+        
+            
+        </div>
+    </div>
+</body>
+</html>

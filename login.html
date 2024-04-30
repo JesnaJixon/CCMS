@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="ccms.css">
+        <title>Login/SignUp College Club Management System</title>
+        <style>
+           body {
+    /* Set background image CSS */
+    background-image: url('campus background.png');
+    /* Prevent background image from repeating */
+    background-repeat: no-repeat;
+    /* Center the background image both horizontally and vertically */
+    background-position: center;
+    /* Scale the background image to fit the entire webpage without cropping */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Optional: Set background color as fallback */
+    background-color: #f0f0f0; /* Fallback color if the image is not available or supported */
+}
+
+
+        </style>
+        <body>
+        <form action = "form.php" method = "post" id = "login">
+            <div class="wrapper">
+                <div class="login_box">
+                    <div class="login_header">
+                        <span>Login</span>
+                    </div>
+                    
+                    <div class="input_box">
+                        <input type="email" id="user" class="input-field" required>
+                        <label for="user" class="label">College Email ID</label>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" id="pass" class="input-field" required>
+                        <label for="password" class="label">Password</label>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="remember-forgot">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <div class="forgot">
+                            <a href="#" target="_self" title="Click if you forgot your password.">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="input_box">
+                        <!-- Convert input submit to button -->
+                        <button id="loginButton" class="input-submit">Login</button>
+                    </div>
+                    <script>
+                        // Add event listener to the login button
+                        document.getElementById("loginButton").addEventListener("click", function() {
+                            // Simulating successful login
+                            // Here you would perform actual login logic (e.g., validate credentials)
+                            // If login is successful, redirect to the homepage
+                            window.location.href = "index.html"; // Replace "index.html" with the actual URL of your homepage
+                        });
+                    </script>
+                    <div class="SignUp">
+                        <span>Don't have an account? <a href="signup.html" target="_self" title="Click to Sign Up!">Sign Up!</a></span>
+                    </div>
+                </div>
+            </div>
+            
+        </form>  
+
+        </body>
+    </head>
+</html>

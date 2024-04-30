@@ -1,0 +1,245 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===Reusable css=== */
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===Wrapper===*/
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ===Header=== */
+header {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height as needed */
+    backdrop-filter: blur(25px);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 2em 2.5em;
+    color: var(--second-color);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 30px;
+    color: black;
+}
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    box-shadow: 15px 0 0 0 solid white;
+}
+
+header::before {
+    left: -30px;
+    border-top-right-radius: 50%;
+}
+
+header::after {
+    right: -30px;
+    border-top-left-radius: 50%;
+}
+
+/* ===Main=== */
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+section {
+    width: calc(50% - 1em);
+    margin: 1em;
+    padding: 1.5em;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 1em;
+}
+
+section p {
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+section button {
+    width: 100%;
+    height: 50px;
+    background: #ececec;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: .3s;
+}
+
+section button:hover {
+    background: var(--second-color);
+}
+
+/* ===Footer=== */
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--second-color);
+    font-size: 16px;
+}
+
+/* ===Media queries=== */
+@media only screen and (max-width: 768px) {
+    main section {
+        width: 100%;
+    }
+}
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 10px; /* Gap between buttons */
+    justify-content: center; /* Center the grid */
+    margin-top: 20px; /* Add some space from the header */
+  }
+  
+  .button {
+    grid-column: span 1; /* Make each button span one column */
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41;
+  }
+  /* ===Main=== */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 10px; /* Gap between buttons */
+    justify-content: center; /* Center the grid */
+    margin-top: 20px; /* Add some space from the header */
+}
+
+.button {
+    grid-column: span 1; /* Make each button span one column */
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+.blurry-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5); /* Optional: Add a semi-transparent background color */
+  }
+  
+  .blurry-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('campus background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  /* ===Main=== */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  
+  .button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 10px; /* Gap between buttons */
+    justify-content: center; /* Center the grid */
+    margin-top: 20px; /* Add some space from the header */
+    position: relative; /* Add this line */
+  }
+  
+  .blurry-background {
+    position: absolute; /* Add this line */
+    width: 100%; /* Add this line */
+    height: 100%; /* Add this line */
+    backdrop-filter: blur(5px); /* Add this line */
+    border-radius: 15px; /* Add this line */
+    overflow: hidden; /* Add this line */
+  }
+  
+  .button {
+    grid-column: span 1; /* Make each button span one column */
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41;
+  }
